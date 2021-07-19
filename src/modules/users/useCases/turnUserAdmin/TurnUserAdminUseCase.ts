@@ -1,3 +1,4 @@
+import { UsersRepository } from "modules/users/repositories/implementations/UsersRepository";
 import { User } from "../../model/User";
 import { IUsersRepository } from "../../repositories/IUsersRepository";
 
@@ -6,10 +7,12 @@ interface IRequest {
 }
 
 class TurnUserAdminUseCase {
-  constructor(private usersRepository: IUsersRepository) {}
+  constructor(private usersRepository: IUsersRepository) { }
 
   execute({ user_id }: IRequest): User {
-    // Complete aqui
+    const user = new User();
+    user.id = user_id;
+    return this.usersRepository.turnAdmin(user);
   }
 }
 

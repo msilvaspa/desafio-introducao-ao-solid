@@ -39,7 +39,7 @@ describe("UsersRepository", () => {
   it("should be able to find user by ID", () => {
     const user = usersRepository.create({
       name: "Vinicius Fraga",
-      email: "vinifraga@rocketseat.com",
+      email: "vinifragaa@rocketseat.com",
     });
 
     const findUser = usersRepository.findById(user.id);
@@ -57,7 +57,7 @@ describe("UsersRepository", () => {
   it("should be able to find user by e-mail address", () => {
     const user = usersRepository.create({
       name: "Vinicius Fraga",
-      email: "vinifraga@rocketseat.com",
+      email: "vinifragaaa@rocketseat.com",
     });
 
     const findUser = usersRepository.findByEmail(user.email);
@@ -75,7 +75,7 @@ describe("UsersRepository", () => {
   it("should be able to turn an user as admin", () => {
     const user = usersRepository.create({
       name: "Vinicius Fraga",
-      email: "vinifraga@rocketseat.com",
+      email: "1vinifraga@rocketseat.com",
     });
 
     const admin = usersRepository.turnAdmin(user);
